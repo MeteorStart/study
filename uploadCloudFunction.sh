@@ -1,0 +1,1 @@
+"/Applications/wechatwebdevtools.app/Contents/MacOS/cli" cloud functions deploy --e wedding-h584o --n quickstartFunctions --r --project "/Users/liuxing/WeChatProjects/study" --report_first --report

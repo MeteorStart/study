@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundColor": "#D81920",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#D81920",
+    "navigationBarTitleText": "新华学习社",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
