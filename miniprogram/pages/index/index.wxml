@@ -1,0 +1,8 @@
+<view class="home flex-column">
+  <image class="bg-home-top" src="../../images/bg_home.svg"></image>
+  <view class="item-action flex-column">
+    <image class="item-img" src="../../images/img_item.jpeg"></image>
+    <text class="item-title flex-row">世界读书日，一起读书吧！</text>
+  </view>
+
+</view>
