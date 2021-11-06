@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/my/index"
+    "pages/my/index",
+    "components/popup/index"
   ],
   "tabBar": {
     "custom": true,
@@ -12,13 +13,13 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath":"images/icon_action_unchoose.png",
+        "iconPath": "images/icon_action_unchoose.png",
         "selectedIconPath": "images/icon_action_choose.png",
         "text": "活动"
       },
       {
         "pagePath": "pages/my/index",
-        "iconPath":"images/icon_my_unchoose.png",
+        "iconPath": "images/icon_my_unchoose.png",
         "selectedIconPath": "images/icon_my_choose.png",
         "text": "我的"
       }

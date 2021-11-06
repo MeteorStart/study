@@ -1,2 +1,7 @@
 <!--pages/my/index.wxml-->
-<text>pages/my/index.wxml</text>
+<view class="flex-column">
+    <view bindtap="showPopup">pages/my/index.wxml</view>
+
+<popup id="popup" content='是否要安排当日训练计划日程' btn_no='否' btn_ok='是' bind:error="_error" bind:success="_success">
+</popup>
+</view>

@@ -27,6 +27,7 @@
   margin-left: 21rpx;
   size: 32rpx;
   color: #2A2A2A;
+  font-weight: 600;
   background: #FFFFFF;
   box-shadow: 0rpx 5rpx 10rpx 0rpx rgba(0, 0, 0, 0.03);
   border-radius: 16rpx;
