@@ -1,4 +1,16 @@
-Component({
+Page({
+  data: {
+    isFirst:true
+  },
+
+  close(){
+    this.setData({
+      isFirst:false
+    })
+  },
+  goChoose(){
+
+  },
   pageLifetimes: {
     show() {
       if (typeof this.getTabBar === 'function' &&

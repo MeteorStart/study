@@ -1,0 +1,54 @@
+.popup {
+    width: 750rpx;
+    height: 100%;
+}
+
+.popup-show {
+    width: 630rpx;
+    height: 510rpx;
+}
+
+.popup-close {
+    width: 28rpx;
+    height: 28rpx;
+    align-self: flex-end;
+}
+
+.popup-content {
+    width: 630rpx;
+    height: 450rpx;
+    margin-top: 30rpx;
+    background: #FFFFFF;
+    border-radius: 16rpx;
+}
+
+.popup-icon {
+    width: 70rpx;
+    height: 70rpx;
+    margin-top: 59rpx;
+}
+
+.popup-title {
+    margin-top: 27rpx;
+    font-size: 34rpx;
+    font-weight: 600;
+    color: #2A2A2A;
+}
+
+.popup-sub {
+    margin-top: 39rpx;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #999999;
+}
+
+.popup-com {
+    width: 350rpx;
+    height: 88rpx;
+    background: #D81920;
+    font-size: 28rpx;
+    margin-top: 40rpx;
+    font-weight: 600;
+    color: #FFFFFF;
+    border-radius: 44rpx;
+}

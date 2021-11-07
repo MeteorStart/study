@@ -1,7 +1,32 @@
-<!--pages/my/index.wxml-->
-<view class="flex-column">
-    <view bindtap="showPopup">pages/my/index.wxml</view>
-
-<popup id="popup" content='是否要安排当日训练计划日程' btn_no='否' btn_ok='是' bind:error="_error" bind:success="_success">
-</popup>
+<!-- 正常显示数据 -->
+<view class="home flex-column">
+    <image class="bg-home-top" src="../../images/bg_home.svg"></image>
+    <view class="my-top flex-column">
+        <view class="my-user-info flex-column">
+            <!-- 头像 -->
+            <open-data class="user-avatar" type="userAvatarUrl"></open-data>
+            <!-- 昵称 -->
+            <open-data class="user-nick-name" type="userNickName"></open-data>
+        </view>
+        <view class="my-user-detail flex-center">
+            <view class="my-clock flex-column">
+                <view class="my-clock-num">5</view>
+                <view class="my-clock-title">打卡天数</view>
+            </view>
+            <view class="line"></view>
+            <view class="my-clock flex-column">
+                <view class="my-clock-num">15</view>
+                <view class="my-clock-title">累计积分</view>
+            </view>
+        </view>
+    </view>
+    <view class="my-content flex-column">
+        <setting-item src="../../images/icon-daka.png" title='打卡记录'></setting-item>
+        <view class="line2"></view>
+        <setting-item src="../../images/icon-change.png" title='兑换列表'></setting-item>
+        <view class="line2"></view>
+        <setting-item src="../../images/icon-share.png" title='推荐给好友'></setting-item>
+        <view class="line2"></view>
+        <setting-item src="../../images/icon-kefu.png" title='联系客服'></setting-item>
+    </view>
 </view>

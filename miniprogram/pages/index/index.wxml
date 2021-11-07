@@ -1,8 +1,26 @@
+<import src="../../template/home-popup/popup.wxml" />
+<!-- 正常显示数据 -->
 <view class="home flex-column">
   <image class="bg-home-top" src="../../images/bg_home.svg"></image>
   <view class="item-action flex-column">
     <image class="item-img" src="../../images/img_item.jpeg"></image>
     <text class="item-title flex-row">世界读书日，一起读书吧！</text>
   </view>
-
 </view>
+
+<!-- 首次进入弹窗 -->
+<view class="mask" wx:if="{{isFirst}}"></view>
+<view class="popup flex-center" wx:if="{{isFirst}}">
+  <view class="popup-show flex-column">
+    <image class="popup-close" src="../../images/icon-close.png" bindtap="close"></image>
+    <view class="popup-content flex-column">
+      <image class="popup-icon" src="../../images/icon-liwu.png"></image>
+      <text class="popup-title">打卡送礼物</text>
+      <text class="popup-sub">快去选一个你喜欢的礼物吧！</text>
+      <view class="popup-com flex-center" bindtap="goChoose">去选择</view>
+    </view>
+  </view>
+</view>
+
+<!-- 用<template> 不知道怎么加子view的点击监听 -->
+<!-- <template class="popup" is="home-popup" wx:if="{{isFirst}}"/> -->

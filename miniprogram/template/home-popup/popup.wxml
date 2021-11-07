@@ -1,0 +1,13 @@
+<template name="home-popup">
+    <view class="popup flex-center">
+        <view class="popup-show flex-column">
+            <image class="popup-close" src="../../images/icon-close.png"></image>
+            <view class="popup-content flex-column">
+                <image class="popup-icon" src="../../images/icon-liwu.png"></image>
+                <text class="popup-title">打卡送礼物</text>
+                <text class="popup-sub">快去选一个你喜欢的礼物吧！</text>
+                <view class="popup-com flex-center">去选择</view>
+            </view>
+        </view>
+    </view>
+</template>

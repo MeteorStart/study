@@ -1,0 +1,6 @@
+<!--components/setting/index.wxml-->
+<view class="my-setting flex-row">
+    <image class="my-setting-icon" src="{{src}}"></image>
+    <view class="my-setting-title">{{title}}</view>
+    <van-icon class="my-setting-enter" name="arrow" color="#AAAAAA" />
+</view>

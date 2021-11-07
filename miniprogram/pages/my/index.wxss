@@ -1,1 +1,70 @@
-/* pages/my/index.wxss */
+.bg-home-top {
+    width: 100%;
+    height: 330rpx;
+    position: fixed;
+    z-index: 0;
+}
+
+.user-avatar {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.user-nick-name {
+    margin-top: 20rpx;
+    font-size: 30rpx;
+    font-weight: 600;
+    color: #2A2A2A;
+    z-index: 2;
+}
+
+.my-user-detail {
+    margin-top: -105rpx;
+    width: 690rpx;
+    height: 280rpx;
+    background: #FFFFFF;
+    border-radius: 20rpx;
+    z-index: 1;
+    align-items: flex-end;
+    padding-bottom: 54rpx;
+}
+
+.my-clock {
+    flex-grow: 1;
+}
+
+.line {
+    width: 2rpx;
+    height: 80rpx;
+    background: #EEEEEE;
+}
+
+.my-clock-num {
+    font-size: 38rpx;
+    font-weight: 600;
+    color: #2A2A2A;
+}
+
+.my-clock-title {
+    margin-top: 28rpx;
+    font-size: 22rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #AAAAAA;
+}
+
+.my-content {
+    margin-top: 20rpx;
+    width: 690rpx;
+    background: #FFFFFF;
+    border-radius: 20rpx 20rpx 20rpx 20rpx;
+}
+
+.line2{
+    width: 690rpx;
+    height: 1rpx;
+    background-color: #F6F6F6;
+}
