@@ -41,6 +41,12 @@
                     "pathName": "pages/gift/index",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "活动详情",
+                    "pathName": "pages/actionDetail/index",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }
