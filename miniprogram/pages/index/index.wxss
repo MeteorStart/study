@@ -6,33 +6,9 @@
   position: fixed;
   z-index: 0;
 }
-
-.item-action {
-  width: 690rpx;
-  height: 40r0px;
-  margin-top: 20rpx;
-  background: #FFFFFF;
-  box-shadow: 0rpx 5rpx 10rpx 0rpx rgba(0, 0, 0, 0.03);
-  border-radius: 16rpx;
+.action-list{
   z-index: 1;
-}
-
-.item-img {
-  width: 690rpx;
-  height: 300rpx;
-  border-radius: 15rpx 15rpx 0rpx 0rpx;
-}
-
-.item-title {
-  width: 690rpx;
-  height: 100rpx;
-  margin-left: 21rpx;
-  size: 32rpx;
-  color: #2A2A2A;
-  font-weight: 600;
-  background: #FFFFFF;
-  box-shadow: 0rpx 5rpx 10rpx 0rpx rgba(0, 0, 0, 0.03);
-  border-radius: 16rpx;
+  padding-bottom: 167rpx;
 }
 
 .mask{

@@ -8,9 +8,13 @@ Page({
       isFirst:false
     })
   },
+  
   goChoose(){
 
   },
+})
+
+Component({
   pageLifetimes: {
     show() {
       if (typeof this.getTabBar === 'function' &&

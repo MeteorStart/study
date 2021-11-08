@@ -1,4 +1,4 @@
-Page({
+Component({
   pageLifetimes: {
     show() {
       if (typeof this.getTabBar === 'function' &&

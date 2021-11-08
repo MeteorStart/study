@@ -5,6 +5,7 @@
         "pages/integral/index",
         "pages/conversion/index",
         "pages/gift/index",
+        "components/action/index",
         "components/setting/index",
         "components/gift/index",
         "components/conversion/index",
