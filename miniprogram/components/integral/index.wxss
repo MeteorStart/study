@@ -1,0 +1,77 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.integral-item {
+  width: 630rpx;
+  height: 100rpx;
+  padding: 30rpx;
+  background: #FFFFFF;
+  box-shadow: 0rpx 5rpx 10rpx 0rpx rgba(0, 0, 0, 0.03);
+  border-radius: 16rpx;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+
+.integral-rank-1 {
+  width: 50rpx;
+  height: 50rpx;
+  background: #F0C134;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.integral-rank-2 {
+  width: 50rpx;
+  height: 50rpx;
+  background: #CCCAC6;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.integral-rank-3 {
+  width: 50rpx;
+  height: 50rpx;
+  background: #DDA55D;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.integral-rank-4 {
+  width: 50rpx;
+  height: 50rpx;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #2A2A2A;
+  line-height: 60rpx;
+}
+
+.integral-avatar {
+  margin-left: 30rpx;
+}
+
+.integral-nick-name {
+  font-size: 26rpx;
+  font-weight: 400;
+  margin-left: 22rpx;
+  color: #2A2A2A;
+  line-height: 60rpx;
+  flex-grow: 1;
+}
+
+.integral-integral {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #D81920;
+  line-height: 60rpx;
+}

@@ -1,0 +1,11 @@
+<page-meta>
+  <navigation-bar title="积分排行榜" />
+</page-meta>
+<view class="integral flex-column">
+  <integral-item rank='1'></integral-item>
+  <integral-item rank='2'></integral-item>
+  <integral-item rank='3'></integral-item>
+  <integral-item rank='4'></integral-item>
+  <integral-item rank='5'></integral-item>
+  <integral-item rank='6'></integral-item>
+</view>

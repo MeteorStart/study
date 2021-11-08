@@ -1,4 +1,7 @@
 <import src="../../template/home-popup/popup.wxml" />
+<page-meta>
+  <navigation-bar title="新华学习社" />
+</page-meta>
 <!-- 正常显示数据 -->
 <view class="home flex-column">
   <image class="bg-home-top" src="../../images/bg_home.svg"></image>

@@ -2,7 +2,9 @@
     "pages": [
         "pages/index/index",
         "pages/my/index",
-        "components/setting/index"
+        "pages/integral/index",
+        "components/setting/index",
+        "components/integral/index"
     ],
     "tabBar": {
         "custom": true,
@@ -29,7 +31,7 @@
         "backgroundColor": "#D81920",
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#D81920",
-        "navigationBarTitleText": "新华学习社",
+        "navigationBarTitleText": "",
         "navigationBarTextStyle": "white"
     },
     "sitemapLocation": "sitemap.json"

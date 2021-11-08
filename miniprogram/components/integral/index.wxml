@@ -1,0 +1,8 @@
+<view class="integral-item flex-row">
+  <view class="{{rankClass}} flex-center">{{rank}}</view>
+  <!-- 头像 -->
+  <van-image class="integral-avatar" round width="80rpx" height="80rpx" src="{{srcUrl}}" />
+  <!-- 昵称 -->
+  <view class="integral-nick-name">{{nickName}}</view>
+  <view class="integral-integral">{{integral}}</view>
+</view>

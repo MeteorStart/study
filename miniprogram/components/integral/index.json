@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "integral-item":"/components/integral/index",
+    "van-image": "@vant/weapp/image/index"
+  }
+}

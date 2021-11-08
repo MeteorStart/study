@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "integral-item":"/components/integral/index"
+  }
+}
