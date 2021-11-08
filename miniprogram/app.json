@@ -3,6 +3,7 @@
         "pages/index/index",
         "pages/my/index",
         "pages/integral/index",
+        "pages/conversion/index",
         "components/setting/index",
         "components/integral/index"
     ],

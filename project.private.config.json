@@ -29,6 +29,12 @@
           "pathName": "pages/integral/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "兑换列表",
+          "pathName": "pages/conversion/index",
+          "query": "",
+          "scene": null
         }
       ]
     }
