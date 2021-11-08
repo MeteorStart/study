@@ -5,6 +5,7 @@
         "pages/integral/index",
         "pages/conversion/index",
         "components/setting/index",
+        "components/conversion/index",
         "components/integral/index"
     ],
     "tabBar": {

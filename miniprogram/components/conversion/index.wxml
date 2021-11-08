@@ -1,0 +1,20 @@
+<view class="conversion-item flex-row">
+  <view class="conversion-image-state">
+    <image class="coversion-image" src="{{srcUrl}}"></image>
+    <view class="coversion-state flex-center">{{state?changed:noChange}}</view>
+  </view>
+  <view class="gift-content">
+    <view class="gift-name">{{giftName}}</view>
+    <view class="gift-need-integral flex-row">
+      <image class="gift-icon" src="../../images/icon-integral.png"></image>
+      <view class="need-integral-title">所需积分:</view>
+      <view class="need-integral">{{needIntegral}}</view>
+    </view>
+    <view class="gift-need-integral2 flex-row">
+      <image class="gift-icon" src="../../images/icon-change-gray.png"></image>
+      <view class="need-integral-title">兑换码:</view>
+      <view class="need-integral">{{CDKEY}}</view>
+    </view>
+    <view class="gift-info">请前往新华书店使用兑换码兑换</view>
+  </view>
+</view>

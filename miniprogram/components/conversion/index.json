@@ -1,4 +1,5 @@
 {
+  "component": true,
   "usingComponents": {
     "conversion-item":"/components/conversion/index"
   }
