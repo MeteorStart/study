@@ -4,7 +4,9 @@
         "pages/my/index",
         "pages/integral/index",
         "pages/conversion/index",
+        "pages/gift/index",
         "components/setting/index",
+        "components/gift/index",
         "components/conversion/index",
         "components/integral/index"
     ],

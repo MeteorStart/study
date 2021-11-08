@@ -1,0 +1,12 @@
+<view class="gift-item flex-row">
+    <image class="gift-image" src="{{srcUrl}}"></image>
+    <view class="gift-content">
+        <view class="gift-title">{{giftName}}</view>
+        <view class="gift-integral flex-row">
+            <image class="gift-integral-icon" src="../../images/icon-integral.png"></image>
+            <view class="gift-integral-title">所需积分：</view>
+            <view class="gift-integral">{{needIntegral}}</view>
+        </view>
+        <view class="{{isChoose?chooseClass:noChooseClass}} flex-center">{{isChoose?choose:noChoose}}</view>
+    </view>
+</view>

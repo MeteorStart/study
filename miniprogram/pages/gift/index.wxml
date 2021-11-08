@@ -1,0 +1,13 @@
+<page-meta>
+  <navigation-bar title="礼物列表" />
+</page-meta>
+<view class="gift flex-column">
+   <gift-item isChoose='true'/>
+   <gift-item/>
+   <gift-item/>
+   <gift-item/>
+   <gift-item/>
+   <gift-item/>
+   <gift-item/>
+   <gift-item/>
+</view>
