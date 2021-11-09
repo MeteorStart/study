@@ -3,10 +3,52 @@
 </page-meta>
 <view class="action-detail flex-column">
     <image class="bg-top" src="../../images/bg_home.svg"></image>
+    <!-- 活动介绍 -->
     <view class="action-detail-top flex-column">
         <image class="img-detail" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
         <text class="title-detail flex-row">标题</text>
         <text class="time-detail">活动时间：2021年4月20日—2021年4月23日</text>
-        <text class="introduce-detail">尊敬的家长朋友，为了帮助同学们更好的学以致用，全面提升小伙伴们的阅读理解能力与语言组织能力，从本周开始开启《人生没有白读的书》活动，希望家长朋友们积极配合参与。</text>
+        <text
+            class="introduce-detail">尊敬的家长朋友，为了帮助同学们更好的学以致用，全面提升小伙伴们的阅读理解能力与语言组织能力，从本周开始开启《人生没有白读的书》活动，希望家长朋友们积极配合参与。</text>
     </view>
+    <!-- 打卡 -->
+    <view class="action-detail-daka flex-column">
+        <view class="daka-title">《如何提升阅读能力》</view>
+        <view class="daka-goto flex-center">
+            <image class="daka-icon" src="../../images/icon-qizi.png" />
+            <view class="daka-goto-text">阅读打卡</view>
+        </view>
+    </view>
+    <!-- 进度 -->
+     <view class="detail-schedule flex-row">
+        <view class="detail-choose-gift flex-column">
+            <image class="detail-gift-image" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+            <view class="detail-gift-change flex-center">
+                <image class="detail-gift-change-image" src="../../images/icon-change-green.png"></image>
+                <view class="detail-gift-change-text">更换礼物</view>
+            </view>
+        </view>
+        <view class="detail-gift-schedule">
+            <view class="detail-gift-schedule-title">399元免费阅读课程+精美手表</view>
+            <progress class="progress" border-radius="10" activeColor="#ee0a24" percent="50" stroke-width="10"></progress>
+            <view class="detail-gift-schedule-integral">还需80积分，即可兑换</view>
+        </view>
+    </view> 
+    <!-- 参与用户 -->
+    <view class="detail-join-user flex-column">
+        <view class='cdtouxiang'>
+            <view wx:for="{{images}}" wx:key="id" style='transform:translateX({{-index*20}}rpx)'>
+                <image src='{{item}}' mode='aspectFill'></image>
+            </view>
+        </view>
+        <view class="detail-join-user-info text-24-999">已有9999人参与打卡</view>
+        <view class="detail-join-paihang flex-center">
+            <image class="detail-join-paihang-image" src="../../images/icon-paihang.png"></image>
+            <view class="text-26-fff">打卡排行</view>
+        </view>
+    </view>
+    <view class="detail-share flex-center">
+            <image class="detail-share-image" src="../../images/icon-wechat.png"></image>
+            <view class="text-32-fff">分享活动</view>
+        </view>
 </view>

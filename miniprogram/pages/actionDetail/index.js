@@ -5,7 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        images:['https://img.yzcdn.cn/vant/cat.jpeg','https://img.yzcdn.cn/vant/cat.jpeg','https://img.yzcdn.cn/vant/cat.jpeg']
     },
 
     /**
