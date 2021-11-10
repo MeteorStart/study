@@ -191,6 +191,9 @@ class Calendar extends WxData {
     if (!onlyShowCurrentMonth) {
       len = len + this.calculateExtraEmptyDate(year, month, config)
     }
+    if(len >6){
+      len = len-7
+    }
     for (let i = 1; i <= len; i++) {
       if (onlyShowCurrentMonth) {
         lastEmptyGrids.push('')

@@ -4,14 +4,8 @@ const conf = {
     // 此处为日历自定义配置字段
     calendarConfig: {
       multi: true, // 是否开启多选,
-      onlyShowCurrentMonth: true, // 日历面板是否只显示本月日期
       takeoverTap: true, // 是否完全接管日期点击事件（日期不会选中)
       highlightToday: true, // 是否高亮显示当天，区别于选中样式（初始化时当天高亮并不代表已选中当天）
-      disableMode: {
-        // 禁用某一天之前/之后的所有日期
-        type: 'before', // [‘before’, 'after']
-        date: '' // 无该属性或该属性值为假，则默认为当天
-      },
     }
   },
   afterTapDay(e) {

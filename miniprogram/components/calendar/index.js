@@ -9,7 +9,6 @@ import initCalendar, {
   whenSingleSelect,
   whenChooseArea,
   getCalendarDates,
-  setSelectedDates
 } from './main.js'
 
 const slide = new Slide()

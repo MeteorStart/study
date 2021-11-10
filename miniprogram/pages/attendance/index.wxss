@@ -1,15 +1,14 @@
 /* pages/attendance/index.wxss */
 .calendar {
   background: #FFFFFF;
+  width: 100%;
 }
 
 .action-detail-daka {
-  margin-top: 30rpx;
-  width: 690rpx;
+  margin-top: 10rpx;
+  width: 100%;
   height: 350rpx;
   background: #FFFFFF;
-  box-shadow: 0rpx 5rpx 10rpx 0rpx rgba(0, 0, 0, 0.03);
-  border-radius: 16rpx;
   z-index: 1;
 }
 
