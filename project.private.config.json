@@ -1,54 +1,60 @@
 {
-    "setting": {},
-    "condition": {
-        "plugin": {
-            "list": []
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
         },
-        "game": {
-            "list": []
+        {
+          "name": "我的",
+          "pathName": "pages/my/index",
+          "query": "",
+          "scene": null
         },
-        "gamePlugin": {
-            "list": []
+        {
+          "name": "积分排行榜",
+          "pathName": "pages/integral/index",
+          "query": "",
+          "scene": null
         },
-        "miniprogram": {
-            "list": [
-                {
-                    "name": "首页",
-                    "pathName": "pages/index/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "我的",
-                    "pathName": "pages/my/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "积分排行榜",
-                    "pathName": "pages/integral/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "兑换列表",
-                    "pathName": "pages/conversion/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "礼物列表",
-                    "pathName": "pages/gift/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "活动详情",
-                    "pathName": "pages/actionDetail/index",
-                    "query": "",
-                    "scene": null
-                }
-            ]
+        {
+          "name": "兑换列表",
+          "pathName": "pages/conversion/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "礼物列表",
+          "pathName": "pages/gift/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "活动详情",
+          "pathName": "pages/actionDetail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "打卡记录",
+          "pathName": "pages/attendance/index",
+          "query": "",
+          "scene": null
         }
+      ]
     }
+  }
 }

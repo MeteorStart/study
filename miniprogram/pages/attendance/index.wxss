@@ -1,0 +1,39 @@
+/* pages/attendance/index.wxss */
+.calendar {
+  background: #FFFFFF;
+}
+
+.action-detail-daka {
+  margin-top: 30rpx;
+  width: 690rpx;
+  height: 350rpx;
+  background: #FFFFFF;
+  box-shadow: 0rpx 5rpx 10rpx 0rpx rgba(0, 0, 0, 0.03);
+  border-radius: 16rpx;
+  z-index: 1;
+}
+
+.daka-title {
+  font-size: 32rpx;
+  color: #2A2A2A;
+  margin-top: 70rpx;
+}
+
+.daka-goto {
+  width: 500rpx;
+  margin-top: 50rpx;
+  height: 100rpx;
+  background: #D81920;
+  border-radius: 50rpx;
+}
+
+.daka-icon {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.daka-goto-text {
+  font-size: 28rpx;
+  margin-left: 13rpx;
+  color: #FFFFFF;
+}

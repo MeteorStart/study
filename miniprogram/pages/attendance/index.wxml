@@ -1,0 +1,21 @@
+<view class="flex-column">
+  <calendar class="calendar" calendarConfig="{{calendarConfig}}" 
+    bind:takeoverTap="takeoverTap" 
+    bind:onTapDay="onTapDay"
+    bind:afterTapDay="afterTapDay"
+    bind:afterTapDate="afterTapDate"
+    bind:afterCalendarRender="afterCalendarRender" 
+    bind:onSwipe="onSwipe" 
+    bind:whenChangeMonth="whenChangeMonth">
+  </calendar>
+
+  <!-- 打卡 -->
+  <view class="action-detail-daka flex-column">
+    <view class="daka-title">《如何提升阅读能力》</view>
+    <view class="daka-goto flex-center">
+      <image class="daka-icon" src="../../images/icon-qizi.png" />
+      <view class="daka-goto-text">阅读打卡</view>
+    </view>
+  </view>
+
+</view>

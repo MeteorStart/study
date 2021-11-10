@@ -6,6 +6,7 @@
         "pages/conversion/index",
         "pages/gift/index",
         "pages/actionDetail/index",
+        "pages/attendance/index",
         "components/action/index",
         "components/setting/index",
         "components/gift/index",
