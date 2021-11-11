@@ -1,4 +1,4 @@
-<view class="item-action flex-column">
+<view class="item-action flex-column" bindtap="goDetail">
   <image class="item-img" src="{{srcUrl}}"></image>
   <text class="item-title flex-row">{{title}}</text>
 </view>

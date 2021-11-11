@@ -1,4 +1,5 @@
 // pages/gift/index.js
+const app = getApp()
 Page({
 
     /**
@@ -6,6 +7,13 @@ Page({
      */
     data: {
 
+    },
+    
+    chooseGift: function (e) { //事件监听函数
+        console.log("子组件传过来的数据：" + e.detail.giftName + e.detail.srcUrl)
+        wx.navigateBack({
+          delta: 0,
+        })
     },
 
     /**

@@ -12,7 +12,7 @@
   <!-- 打卡 -->
   <view class="action-detail-daka flex-column">
     <view class="daka-title">《如何提升阅读能力》</view>
-    <view class="daka-goto flex-center">
+    <view class="daka-goto flex-center" bindtap="goWeb">
       <image class="daka-icon" src="../../images/icon-qizi.png" />
       <view class="daka-goto-text">阅读打卡</view>
     </view>

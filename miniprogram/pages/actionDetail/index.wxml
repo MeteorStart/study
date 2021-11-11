@@ -14,7 +14,7 @@
     <!-- 打卡 -->
     <view class="action-detail-daka flex-column">
         <view class="daka-title">《如何提升阅读能力》</view>
-        <view class="daka-goto flex-center">
+        <view class="daka-goto flex-center" bindtap="goWeb">
             <image class="daka-icon" src="../../images/icon-qizi.png" />
             <view class="daka-goto-text">阅读打卡</view>
         </view>
@@ -23,7 +23,7 @@
      <view class="detail-schedule flex-row">
         <view class="detail-choose-gift flex-column">
             <image class="detail-gift-image" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
-            <view class="detail-gift-change flex-center">
+            <view class="detail-gift-change flex-center" bindtap="changeGift">
                 <image class="detail-gift-change-image" src="../../images/icon-change-green.png"></image>
                 <view class="detail-gift-change-text">更换礼物</view>
             </view>
@@ -42,13 +42,13 @@
             </view>
         </view>
         <view class="detail-join-user-info text-24-999">已有9999人参与打卡</view>
-        <view class="detail-join-paihang flex-center">
+        <view class="detail-join-paihang flex-center" bindtap="goIntegral">
             <image class="detail-join-paihang-image" src="../../images/icon-paihang.png"></image>
-            <view class="text-26-fff">打卡排行</view>
+            <view class="text-26-fff">积分排行</view>
         </view>
     </view>
-    <view class="detail-share flex-center">
+    <button class="detail-share flex-center" open-type='share'>
             <image class="detail-share-image" src="../../images/icon-wechat.png"></image>
             <view class="text-32-fff">分享活动</view>
-        </view>
+        </button>
 </view>

@@ -8,6 +8,21 @@ Page({
         images:['https://img.yzcdn.cn/vant/cat.jpeg','https://img.yzcdn.cn/vant/cat.jpeg','https://img.yzcdn.cn/vant/cat.jpeg']
     },
 
+    changeGift:function(){
+        wx.navigateTo({
+          url: '../gift/index',
+        })
+    },
+    goIntegral:function(){
+        wx.navigateTo({
+          url: '../integral/index',
+        })
+    },
+    goWeb:function(){
+        wx.navigateTo({
+            url: '../webview/index',
+          })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

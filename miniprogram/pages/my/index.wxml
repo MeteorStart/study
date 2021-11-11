@@ -21,11 +21,13 @@
         </view>
     </view>
     <view class="my-content flex-column">
-        <setting-item src="../../images/icon-daka.png" title='打卡记录'></setting-item>
+        <setting-item src="../../images/icon-daka.png" title='打卡记录' bindtap="goDaka"></setting-item>
         <view class="line2"></view>
-        <setting-item src="../../images/icon-change.png" title='兑换列表'></setting-item>
+        <setting-item src="../../images/icon-change.png" title='兑换列表' bindtap="goGift"></setting-item>
         <view class="line2"></view>
-        <setting-item src="../../images/icon-share.png" title='推荐给好友'></setting-item>
+        <button class="btn"open-type="share">
+            <setting-item src="../../images/icon-share.png" title='推荐给好友'></setting-item>
+        </button>
         <view class="line2"></view>
         <setting-item src="../../images/icon-kefu.png" title='联系客服'></setting-item>
     </view>

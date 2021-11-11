@@ -7,6 +7,6 @@
             <view class="gift-integral-title">所需积分：</view>
             <view class="gift-integral">{{needIntegral}}</view>
         </view>
-        <view class="{{isChoose?chooseClass:noChooseClass}} flex-center">{{isChoose?choose:noChoose}}</view>
+        <view class="{{isChoose?chooseClass:noChooseClass}} flex-center" bindtap="chooseGift">{{isChoose?choose:noChoose}}</view>
     </view>
 </view>

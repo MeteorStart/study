@@ -8,5 +8,17 @@ Component({
         })
       }
     }
+  },
+  methods:{
+    goDaka: function (e) { //事件监听函数
+      wx.navigateTo({
+        url: '../attendance/index',
+      })
+    },
+    goGift: function (e) { //事件监听函数
+      wx.navigateTo({
+        url: '../gift/index',
+      })
+    },
   }
 })

@@ -6,9 +6,9 @@
 <view class="home flex-column">
   <image class="bg-home-top" src="../../images/bg_home.svg"></image>
   <view class="action-list flex-column">
-    <action-item/>
-    <action-item srcUrl="https://www.iyunying.org/wp-content/uploads/2018/04/yunying-1524493437.jpeg" title="世界读书日，一起读书吧！"/>
-    <action-item srcUrl="https://image.bitauto.com/dealer/news/100047664/32c505da-9f2d-432c-af31-d9b66eb41ea6.jpg" title="教师节读书活动，限时报名中！"/>
+    <action-item bindevents="goDetail"/>
+    <action-item srcUrl="https://www.iyunying.org/wp-content/uploads/2018/04/yunying-1524493437.jpeg" title="世界读书日，一起读书吧！" bindevents="goDetail"/>
+    <action-item srcUrl="https://image.bitauto.com/dealer/news/100047664/32c505da-9f2d-432c-af31-d9b66eb41ea6.jpg" title="教师节读书活动，限时报名中！" bindevents="goDetail"/>
     <action-item/>
   </view>
 </view>

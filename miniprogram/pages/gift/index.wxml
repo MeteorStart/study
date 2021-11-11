@@ -2,12 +2,12 @@
   <navigation-bar title="礼物列表" />
 </page-meta>
 <view class="gift flex-column">
-   <gift-item isChoose='true'/>
-   <gift-item/>
-   <gift-item/>
-   <gift-item/>
-   <gift-item/>
-   <gift-item/>
-   <gift-item/>
-   <gift-item/>
+   <gift-item isChoose='true' bindevents="chooseGift"/>
+   <gift-item bindevents="chooseGift"/>
+   <gift-item bindevents="chooseGift"/>
+   <gift-item bindevents="chooseGift"/>
+   <gift-item bindevents="chooseGift"/>
+   <gift-item bindevents="chooseGift"/>
+   <gift-item bindevents="chooseGift"/>
+   <gift-item bindevents="chooseGift"/>
 </view>

@@ -20,9 +20,11 @@ const conf = {
       rst: []
     })
     const calendar = this.calendar
-    const { year, month } = calendar.getCurrentYM()
-    const toSet = [
-      {
+    const {
+      year,
+      month
+    } = calendar.getCurrentYM()
+    const toSet = [{
         year,
         month,
         day: this.generateRandomDate('date')
@@ -65,6 +67,11 @@ const conf = {
     }
     return random
   },
+  goWeb: function () {
+    wx.navigateTo({
+      url: '../webview/index',
+    })
+  },
 }
 
 Page(conf, {
@@ -79,6 +86,5 @@ Page(conf, {
   /**
    * 生命周期函数--监听页面加载
    */
-  onShow: function () {
-  },
+  onShow: function () {},
 })
