@@ -1,4 +1,8 @@
 Component({
+  data: {
+    isLoad: true
+  },
+  
   pageLifetimes: {
     show() {
       if (typeof this.getTabBar === 'function' &&
@@ -15,9 +19,9 @@ Component({
         url: '../attendance/index',
       })
     },
-    goGift: function (e) { //事件监听函数
+    goConversion: function (e) { //事件监听函数
       wx.navigateTo({
-        url: '../gift/index',
+        url: '../conversion/index',
       })
     },
   }

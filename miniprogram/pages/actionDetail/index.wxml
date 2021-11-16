@@ -21,7 +21,7 @@
     </view>
     <!-- 进度 -->
      <view class="detail-schedule flex-row">
-        <view class="detail-choose-gift flex-column">
+        <view class="detail-choose-gift flex-column" bindtap="changeGift">
             <image class="detail-gift-image" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
             <view class="detail-gift-change flex-center" bindtap="changeGift">
                 <image class="detail-gift-change-image" src="../../images/icon-change-green.png"></image>

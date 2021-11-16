@@ -23,7 +23,7 @@
     <view class="my-content flex-column">
         <setting-item src="../../images/icon-daka.png" title='打卡记录' bindtap="goDaka"></setting-item>
         <view class="line2"></view>
-        <setting-item src="../../images/icon-change.png" title='兑换列表' bindtap="goGift"></setting-item>
+        <setting-item src="../../images/icon-change.png" title='兑换列表' bindtap="goConversion"></setting-item>
         <view class="line2"></view>
         <button class="btn"open-type="share">
             <setting-item src="../../images/icon-share.png" title='推荐给好友'></setting-item>
