@@ -87,18 +87,18 @@ Component({
             userInfo: res.userInfo,
             hasUserInfo: true
           })
-          console.log('userinfo',res.userInfo)
+          console.log('userinfo', res.userInfo)
         }
       })
     },
-    
+
     getUserInfo(e) {
       // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
       this.setData({
         userInfo: e.detail.userInfo,
         hasUserInfo: true
       })
-      console.log('userinfo',res.userInfo)
+      console.log('userinfo', res.userInfo)
     },
 
     close() {
@@ -108,6 +108,7 @@ Component({
     },
 
     goChoose() {
+      this.close()
       wx.navigateTo({
         url: '../gift/index',
       })
