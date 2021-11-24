@@ -11,6 +11,6 @@ Component({
      */
     data: {
         src:"../../images/icon-daka.png",
-        title:"打卡记录"
+        title:'打卡记录'
     },
 })

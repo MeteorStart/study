@@ -25,8 +25,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-    choose: "已选择",
-    noChoose: "选择",
+    choose: '已选择',
+    noChoose: '选择',
     chooseClass: "gift-choose",
     noChooseClass: "gift-nochoose"
   },

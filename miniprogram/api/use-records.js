@@ -1,21 +1,27 @@
 // 兑换表相关接口
-
+const db = wx.cloud.database()
+const records = db.collection('xh-use-records')
 /**
  * 获取兑换列表
  */
-function getUseRecords() {
-  const db = wx.cloud.database();
-  const list = db.collection('xh-use-records');
-  return list.orderBy('_updateTime', 'desc').get()
+function getUseRecords(userId) {
+  return records
+    .where({
+      userId: userId
+    })
+    .field({
+      authCode: true,
+      giftId: true,
+      state: true,
+      userId: true
+    }).get()
 }
 
 /**
  * 添加兑换记录
  */
 function addRecord(userId, giftId, authCode, state) {
-  const db = wx.cloud.database();
-  const record = db.collection('xh-use-records');
-  return record.add({
+  return records.add({
     data: {
       userId: userId,
       giftId: giftId,

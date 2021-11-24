@@ -1,12 +1,15 @@
 // 用户表相关接口
 
+const db = wx.cloud.database()
+const _ = db.command
+const users = db.collection('xh-users')
+
 /**
  * 注册用户
  * @param {用户信息} userInfo 
  */
 function register(userInfo) {
-  let db = wx.cloud.database()
-  return db.collection('xh-users').add({
+  return users.add({
     data: {
       nickName: userInfo.nickName,
       avatar: userInfo.avatarUrl,
@@ -21,9 +24,7 @@ function register(userInfo) {
  * 根据openid 获取用户信息
  * @param {唯一标识} openid 
  */
-function getUsre(openid) {
-  let db = wx.cloud.database()
-  let users = db.collection('xh-users')
+function getUser(openid) {
   return users.where({
     _openid: openid
   }).get()
@@ -35,9 +36,7 @@ function getUsre(openid) {
  * @param {礼物ID} giftId 
  */
 function changeUserGift(userId, giftId) {
-  const db = wx.cloud.database()
-  const _ = db.command
-  return db.collection('xh-users').doc(userId)
+  return users.doc(userId)
     .update({
       data: {
         giftId: giftId
@@ -59,15 +58,13 @@ function getUserSort() {
  * @param {用户ID} userId 
  * @param {积分} integral 
  */
-function changeUserIntegral(userId,integral) {
-  const db = wx.cloud.database()
-  const _ = db.command
-  return db.collection('xh-users').doc(userId)
-    .update({
-      data: {
-        integral: integral
-      },
-    })
+function changeUserIntegral(userId, integral) {
+  const res = users.doc(userId).update({
+    data: {
+      integral: _.inc(integral)
+    }
+  })
+  return res
 }
 
 /**
@@ -75,20 +72,18 @@ function changeUserIntegral(userId,integral) {
  * @param {用户ID} userId 
  * @param {打卡天数} clockCount 
  */
-function changeUserClockCount(userId,clockCount) {
-  const db = wx.cloud.database()
-  const _ = db.command
-  return db.collection('xh-users').doc(userId)
-    .update({
-      data: {
-        clockCount: clockCount
-      },
-    })
+function changeUserClockCount(userId, clockCount) {
+  const res = users.doc(userId).update({
+    data: {
+      clockCount: _.inc(clockCount)
+    }
+  })
+  return res
 }
 
 export {
   register,
-  getUsre,
+  getUser,
   changeUserGift,
   getUserSort,
   changeUserIntegral,

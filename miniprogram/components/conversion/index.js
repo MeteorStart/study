@@ -30,8 +30,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-    changed: "已兑换",
-    noChange: "未兑换"
+    changed: '已兑换',
+    noChange: '未兑换'
   },
 
   /**

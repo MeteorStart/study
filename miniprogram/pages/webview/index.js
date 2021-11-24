@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    srcUrl:"https://mp.weixin.qq.com/s/PgpQrJuW89JpqhK8E7AWNQ"
+    srcUrl:'https://mp.weixin.qq.com/s/PgpQrJuW89JpqhK8E7AWNQ'
   },
 
   /**

@@ -22,7 +22,8 @@
       <image class="popup-icon" src="../../images/icon-liwu.png"></image>
       <text class="popup-title">打卡送礼物</text>
       <text class="popup-sub">快去选一个你喜欢的礼物吧！</text>
-      <view class="popup-com flex-center" bindtap="goChoose">去选择</view>
+      <button class="popup-com flex-center" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile">去选择</button>
+      <button class="popup-com flex-center" wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo">去选择</button>
     </view>
   </view>
 </view>

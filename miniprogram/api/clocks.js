@@ -1,5 +1,8 @@
 // 打卡表相关接口
 
+const db = wx.cloud.database();
+const clocks = db.collection('xh-clocks');
+
 /**
  * 添加打卡记录
  * @param {文章ID} articleId 
@@ -7,8 +10,6 @@
  * @param {活动ID} activityId 
  **/
 function addClocks(articleId, userId, activityId) {
-  const db = wx.cloud.database();
-  const clocks = db.collection('xh-clocks');
   return clocks.add({
     data: {
       articleId: articleId,
@@ -27,13 +28,35 @@ function addClocks(articleId, userId, activityId) {
  * @param {用户ID} userId 
  **/
 function queryTimeClocks(userId, startDate, endDate) {
-  const db = wx.cloud.database();
-  const clocks = db.collection('xh-clocks');
   const _ = db.command
   return clocks.where({
     userId: userId,
     date: _.gte(startDate).and(_.lte(endDate))
   }).get()
+}
+
+/**
+ * 根据月份查询打卡记录
+ * @param {用户ID} userId 
+ * @param {月份} month 
+ */
+function getClocksByMonth(userId, month) {
+  let db = wx.cloud.database()
+  const $ = db.command.aggregate
+  const clocks = db.collection('xh-clocks')
+  return clocks.aggregate()
+    .project({
+      userId:true,
+      activityId: true,
+      articleId: true,
+      date: true,
+      month: $.month('$date')
+    })
+    .match({
+      userId: userId,
+      month: month,
+    })
+    .end()
 }
 
 /**
@@ -51,5 +74,6 @@ function queryUserIsClock(userId) {
 export {
   addClocks,
   queryTimeClocks,
-  queryUserIsClock
+  queryUserIsClock,
+  getClocksByMonth
 }

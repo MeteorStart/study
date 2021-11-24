@@ -1,12 +1,16 @@
 // 配置表相关接口
-
+const db = wx.cloud.database()
+const setting = db.collection('xh-setting')
 /**
  * 获取配置积分
  */
 function getIntegral() {
-  const db = wx.cloud.database();
-  const integral = db.collection('xh-setting');
-  return integral.orderBy('integral', 'esc').get()
+  const res = setting
+  .field({
+    integral:true,
+  })
+  .get()
+  return res
 }
 
 export{

@@ -1,6 +1,8 @@
 Component({
   data: {
-    isLoad: true
+    isLoad: true,
+    userAvatar:'../../images/icon-dfu-user.png',
+    userName:'未登录'
   },
   
   pageLifetimes: {
