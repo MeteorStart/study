@@ -8,7 +8,6 @@
 }
 .action-list{
   z-index: 1;
-  padding-bottom: 167rpx;
 }
 
 .mask{

@@ -66,39 +66,60 @@ Component({
     userInfo: {},
     hasUserInfo: false,
     canIUseGetUserProfile: false,
+    activitys: []
   },
 
   methods: {
+
     async onLoad(options) {
       if (wx.getUserProfile) {
         this.setData({
           canIUseGetUserProfile: true
         })
       }
+
+      this.getActivitys()
+
+      const res = await wx.cloud.callFunction({
+        name: 'activitys',
+        data: {
+          type: 'getActivitysCount'
+        }
+      })
+      console.log('activitysCount', res.result.list[0])
     },
 
     getUserProfile(e) {
       // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
       // 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-      wx.getUserProfile({
-        desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-        success: (res) => {
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-          console.log('userinfo', res.userInfo)
-        }
-      })
+      if (!this.data.hasUserInfo) {
+        wx.getUserProfile({
+          desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+          success: (res) => {
+            this.setData({
+              userInfo: res.userInfo,
+              hasUserInfo: true
+            })
+            console.log('userinfo', res.userInfo)
+            this.registerUser(res.userInfo)
+          }
+        })
+      } else {
+        this.goChoose()
+      }
     },
 
     getUserInfo(e) {
       // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
-      this.setData({
-        userInfo: e.detail.userInfo,
-        hasUserInfo: true
-      })
-      console.log('userinfo', res.userInfo)
+      if (!this.data.hasUserInfo) {
+        this.setData({
+          userInfo: e.detail.userInfo,
+          hasUserInfo: true
+        })
+        console.log('userinfo', res.userInfo)
+      } else {
+        this.goChoose()
+      }
     },
 
     close() {
@@ -115,9 +136,9 @@ Component({
     },
 
     goDetail: function (e) { //事件监听函数
-      console.log("子组件传过来的数据：" + e.detail.title + e.detail.srcUrl)
+      console.log("子组件传过来的数据：" + e.currentTarget.dataset.postid + e.detail.title + e.detail.srcUrl)
       wx.navigateTo({
-        url: '../actionDetail/index',
+        url: '../actionDetail/index?activityId=' + JSON.stringify(e.currentTarget.dataset.postid)
       })
     },
 
@@ -200,7 +221,7 @@ Component({
     },
 
     // 注册用户
-    async registerUser() {
+    async registerUser(userInfo) {
       const user = await this.getUser()
       if (user.data.length == 0) {
         const registerRes = await register(userInfo)
@@ -208,7 +229,6 @@ Component({
       } else {
         console.log('已经注册', user.data[0])
       }
-      await changeUserGift(user)
     },
 
     // 根据openId 获取用户
@@ -233,10 +253,29 @@ Component({
     // 获取所有活动
     async getActivitys() {
       const list = await getActivitys()
-      console.log('list', list)
-      const info = await getActivityInfo("859059a56191f9b705ee65401e14cca5")
-      console.log('info', info)
+      console.log('list', list.data)
+      this.setData({
+        activitys: list.data
+      })
+      console.log('activitys', this.data.activitys)
+
+      this.watchActivity(this.data.activitys)
+
+    },
+
+    watchActivity(list) {
+      let onChange = function (snapshot) {
+        console.log('snapshot', snapshot)
+      }
+
+      let onError = function (err) {
+        console.log('err', err)
+      }
+
+      list.forEach(function (element) {
+        // console.log(element);
+        watchActivityInfo(element._id, onChange, onError)
+      });
     }
   },
-
 })

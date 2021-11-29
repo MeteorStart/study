@@ -2,14 +2,12 @@
 <page-meta>
   <navigation-bar title="新华学习社" />
 </page-meta>
+
 <!-- 正常显示数据 -->
 <view class="home flex-column">
   <image class="bg-home-top" src="../../images/bg_home.svg"></image>
-  <view class="action-list flex-column">
-    <action-item bindevents="goDetail"/>
-    <action-item srcUrl="https://www.iyunying.org/wp-content/uploads/2018/04/yunying-1524493437.jpeg" title="世界读书日，一起读书吧！" bindevents="goDetail"/>
-    <action-item srcUrl="https://image.bitauto.com/dealer/news/100047664/32c505da-9f2d-432c-af31-d9b66eb41ea6.jpg" title="教师节读书活动，限时报名中！" bindevents="goDetail"/>
-    <action-item/>
+  <view class="action-list flex-column" wx:for="{{activitys}}" wx:for-item="item" wx:key="id">
+    <action-item bindevents="goDetail"  data-postid="{{item._id}}" srcUrl="{{item.cover}}" title="{{item.title}}"></action-item>
   </view>
 </view>
 
@@ -27,6 +25,3 @@
     </view>
   </view>
 </view>
-
-<!-- 用<template> 不知道怎么加子view的点击监听 -->
-<!-- <template class="popup" is="home-popup" wx:if="{{isFirst}}"/> -->
