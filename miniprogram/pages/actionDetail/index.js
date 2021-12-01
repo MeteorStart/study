@@ -8,6 +8,7 @@
  *  6、通过打卡记录获取打卡用户ID
  *  7、通过打卡用户ID获取打卡用户头像
  * */
+var app = getApp()
 
 Page({
 
@@ -37,9 +38,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let user = app.globalData.user
+    console.log("当前用户:",user)
+
     let that = this
     let activityId = JSON.parse(options.activityId)
     console.log("子组件传过来的数据：" + activityId)
+
   },
 
   /**

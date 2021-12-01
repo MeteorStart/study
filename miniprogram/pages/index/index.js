@@ -38,6 +38,9 @@ import {
   addRecord,
   getUseRecords
 } from '../../api/use-records.js'
+
+var app = getApp()
+
 Component({
   pageLifetimes: {
     show() {
@@ -47,6 +50,7 @@ Component({
         this.setData({
           isFirst: false
         })
+        this.getUser()
       } else {
         console.log("首次打开")
         wx.setStorageSync('isFirst', "111")
@@ -240,7 +244,11 @@ Component({
         }
       })
       console.log('openid', res.result.openid)
+
+      app.globalData.openid = res.result.openid
+
       const user = await getUser(res.result.openid)
+      app.globalData.user = user.data[0]
       return user
     },
 
