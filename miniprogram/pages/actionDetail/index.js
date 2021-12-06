@@ -39,14 +39,42 @@ Page({
    */
   onLoad: function (options) {
     let user = app.globalData.user
-    console.log("当前用户:",user)
+    console.log("当前用户:", user)
 
     let that = this
     let activityId = JSON.parse(options.activityId)
-    console.log("子组件传过来的数据：" + activityId)
+    console.log("子组件传过来的activityId：" + activityId)
+
+    this.getDeatil(activityId, user._id)
 
   },
 
+  getDeatil: function (activityId, userId) {
+    wx.cloud.callFunction({
+      name: 'activitys',
+      data: {
+        type: 'getActivitysDetail',
+        activityId: activityId,
+        userId: userId
+      }
+    }).then(res => {
+      console.log('查询礼物兑换信息', res.result)
+      let clockInfo = res.result.list[0].clocks[0]
+      console.log('打卡信息', clockInfo)
+    })
+  },
+
+  userClock: function (clockInfo) {
+    wx.cloud.callFunction({
+      name: 'clock',
+      data: {
+        type: 'userClock',
+        clockInfo: clockInfo
+      }
+    }).then(res => {
+      console.log('查询礼物兑换信息', res.result)
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

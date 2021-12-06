@@ -9,15 +9,24 @@ const activitys = db.collection('xh-activitys');
  * 获取所有活动
  * 根据创建时间排序，新创建的在前面
  */
-function getActivitys() {
-  // 查询所有的数据 
+function getActivitys(skip, limit) {
   const res = activitys
     .orderBy('_createTime', 'desc')
+    .skip(skip)
+    .limit(limit)
     .field({
       title: true,
       cover: true
-    }).get()
-  return res;
+    })
+    .get()
+  return res
+}
+
+/**
+ * 获取所有活动数量
+ */
+function getActsTotal(){
+  return activitys.count()
 }
 /**
  * 获取活动详细信息
@@ -45,5 +54,6 @@ function watchActivityInfo(id, onChange, onError) {
 export {
   getActivitys,
   getActivityInfo,
-  watchActivityInfo
+  watchActivityInfo,
+  getActsTotal
 }

@@ -1,5 +1,8 @@
 @import "../../template/home-popup/popup.wxss";
 
+.home{
+  margin-bottom: 150rpx;
+}
 .bg-home-top {
   width: 100%;
   height: 330rpx;

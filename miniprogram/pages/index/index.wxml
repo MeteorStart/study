@@ -6,8 +6,8 @@
 <!-- 正常显示数据 -->
 <view class="home flex-column">
   <image class="bg-home-top" src="../../images/bg_home.svg"></image>
-  <view class="action-list flex-column" wx:for="{{activitys}}" wx:for-item="item" wx:key="id">
-    <action-item bindevents="goDetail"  data-postid="{{item._id}}" srcUrl="{{item.cover}}" title="{{item.title}}"></action-item>
+  <view class="action-list flex-column" wx:for="{{activitys}}" wx:for-item="item" wx:key="_id">
+    <action-item bindevents="goDetail" data-postid="{{item._id}}" srcUrl="{{item.cover}}" title="{{item.title}}"></action-item>
   </view>
 </view>
 
