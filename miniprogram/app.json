@@ -8,6 +8,7 @@
         "pages/actionDetail/index",
         "pages/attendance/index",
         "pages/webview/index",
+        "pages/cloudDemo/index",
         "components/action/index",
         "components/setting/index",
         "components/gift/index",

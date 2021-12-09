@@ -59,6 +59,12 @@
           "pathName": "pages/webview/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "云函数测试",
+          "pathName": "pages/cloudDemo/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

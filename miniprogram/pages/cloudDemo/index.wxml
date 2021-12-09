@@ -1,0 +1,6 @@
+<!--pages/cloudDemo/index.wxml-->
+<view class="flex-column">
+  <button bindtap="onMsg" >测试订阅消息</button>
+  <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" >获取手机号码</button>
+  <button open-type="contact">客服消息</button>
+</view>
